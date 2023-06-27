@@ -1,5 +1,5 @@
 export function parseVercelId(id: string | null) {
-  const parts = id?.split(':').filter(Boolean);
+  const parts = id?.split('-').filter(Boolean);
   if (!parts) {
     console.log('"x-vercel-id" header not present. Running on localhost?');
     return { proxyRegion: 'localhost', computeRegion: 'localhost' };

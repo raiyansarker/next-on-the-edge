@@ -25,7 +25,7 @@ async function Delay({
 export default function Page() {
   const headersList = headers();
   const { proxyRegion, computeRegion } = parseVercelId(
-    headersList.get('x-vercel-id')
+    headersList.get('cf-ray')
   );
   const date = new Date().toISOString();
 
